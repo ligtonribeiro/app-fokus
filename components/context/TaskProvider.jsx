@@ -11,7 +11,7 @@ export function TasksProvider({ children }) {
     });
   };
 
-  const toggleTaskCompeted = (id) => {
+  const toggleTaskCompleted = (id) => {
     setTasks((oldState) => {
       return oldState.map((t) => {
         if (t.id === id) {
@@ -30,7 +30,7 @@ export function TasksProvider({ children }) {
 
   return (
     <TaskContext.Provider
-      value={{ tasks, addTask, toggleTaskCompeted, deleteTask }}
+      value={{ tasks, addTask, toggleTaskCompleted, deleteTask }}
     >
       {children}
     </TaskContext.Provider>
